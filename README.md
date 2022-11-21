@@ -7,3 +7,6 @@
 
 4. use datalinkage.py to perform fuzzymatcher to match the entity with their records
 ![image](https://user-images.githubusercontent.com/61874750/202962561-9c49af52-8aa8-4d08-bca1-dfdd33c65ae1.png)
+  4.1 also checks for data that matches but not the entity stated in fuzzy
+  ![image](https://user-images.githubusercontent.com/61874750/202963381-3258da1a-419c-482e-83cf-2537f8572dfb.png)
+
