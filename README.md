@@ -24,3 +24,6 @@ Get the password
 8.![image](https://user-images.githubusercontent.com/61874750/202973580-b41e274d-3777-449a-b16d-3550a151d0f9.png)
   ![image](https://user-images.githubusercontent.com/61874750/202973537-221c31d4-3d9a-4a80-8047-95ead747600c.png)
 
+9. Reset Kibana password
+![image](https://user-images.githubusercontent.com/61874750/202991290-c494adc7-4fae-4423-9d8d-e1dc3a4a53a3.png)
+![image](https://user-images.githubusercontent.com/61874750/202991387-724826fd-55a2-41cc-9e99-161456f160ef.png)
