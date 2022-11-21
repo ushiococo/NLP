@@ -1,0 +1,19 @@
+5.123.144.95 5.123.144.95 [Errno 1] Unknown host
+5.122.76.187 5.122.76.187 [Errno 1] Unknown host
+5.215.249.99 5.215.249.99 [Errno 1] Unknown host
+31.56.102.211 31-56-102-211.shatel.ir ['211.102.56.31.in-addr.arpa'] ['31.56.102.211']
+188.158.178.115 adsl-188-158-178-115.sabanet.ir ['115.178.158.188.in-addr.arpa'] ['188.158.178.115']
+151.239.180.251 151-239-180-251.shatel.ir ['251.180.239.151.in-addr.arpa'] ['151.239.180.251']
+5.115.12.252 5.115.12.252 [Errno 1] Unknown host	
+5.119.203.1 5.119.203.1 [Errno 1] Unknown host	
+31.59.181.44 31-59-181-44.shatel.ir ['44.181.59.31.in-addr.arpa'] ['31.59.181.44']
+5.114.238.230 5.114.238.230 [Errno 1] Unknown host
+93.110.116.179 93.110.116.179 [Errno 1] Unknown host
+80.75.8.250 outlook.alhavipharma.com ['250.8.75.80.in-addr.arpa'] ['80.75.8.250']
+83.121.111.6 83.121.111.6 [Errno 1] Unknown host	
+40.77.192.125 msnbot-40-77-192-125.search.msn.com ['125.192.77.40.in-addr.arpa'] ['40.77.192.125']
+89.198.144.94	89.198.144.94	[Errno 1] Unknown host	
+5.113.103.114	5.113.103.114	[Errno 1] Unknown host	
+83.122.100.169	83.122.100.169	[Errno 1] Unknown host	
+178.131.237.158	178.131.237.158	[Errno 1] Unknown host	
+86.55.112.130	86.55.112.130	[Errno 1] Unknown host	
