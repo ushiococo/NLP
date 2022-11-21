@@ -11,8 +11,8 @@
   ![image](https://user-images.githubusercontent.com/61874750/202963381-3258da1a-419c-482e-83cf-2537f8572dfb.png)
 
 5. Startup Elasticsearch
-1. Edit elasticsearch.yml in config folder with
- ![image](https://user-images.githubusercontent.com/61874750/202965280-b4c53ffb-4bba-41e1-a103-b55fc2005c13.png)
+1. Edit elasticsearch.yml in config folder with 
+![image](https://user-images.githubusercontent.com/61874750/202965280-b4c53ffb-4bba-41e1-a103-b55fc2005c13.png)
 
 6. run elasticsearch.bat in command prompt
 ![image](https://user-images.githubusercontent.com/61874750/202965178-d8f902bd-b2a7-4699-8624-1b5a9ca778fd.png)
