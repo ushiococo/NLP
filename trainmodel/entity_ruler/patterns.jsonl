@@ -1,4 +1,0 @@
-{"label":"client","pattern":[{"TEXT":{"REGEX":"[^A-Za-z]*$"}},{"ENT_TYPE":"client"}]}
-{"label":"hostname","pattern":[{"TEXT":{"REGEX":"^[a-zA-Z0-9_.-]*$"}},{"ENT_TYPE":"hostname"}]}
-{"label":"alias_list","pattern":[{"TEXT":{"REGEX":"^\\['(\\d+.\\d+.\\d+.\\d+.\\w+-\\w+\\w+$)'\\]"}},{"ENT_TYPE":"alias_list"}]}
-{"label":"address_list","pattern":[{"TEXT":{"REGEX":"^\\['^(\\d+.\\d+.\\d+.\\d+)'\\]*$"}},{"ENT_TYPE":"address_list"}]}
