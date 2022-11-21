@@ -21,6 +21,7 @@ Get the password
 
 7. Make sure is connected to Elasticsearch
   localhost:9200
+  
 8.![image](https://user-images.githubusercontent.com/61874750/202973580-b41e274d-3777-449a-b16d-3550a151d0f9.png)
   ![image](https://user-images.githubusercontent.com/61874750/202973537-221c31d4-3d9a-4a80-8047-95ead747600c.png)
 
