@@ -17,7 +17,7 @@ except Exception as e:
 
 now = datetime.now()
 es_username= "elastic"
-es_password = "CtS-1ITidsWKdU7rzCMt"
+es_password = "sV6Z4M-ExtFR7MiP8UM61"
 es = Elasticsearch([{"host": "127.0.0.1", "port": 9200,"scheme": "http"}],basic_auth=(str(es_username), str(es_password)))
 
 # Multiple nodes via dictionary
@@ -92,7 +92,9 @@ if user_input == 1:
 if user_input == 2:
     now = datetime.now()
     es_username = "elastic"
-    es_password = "CtS-1ITidsWKdU7rzCMt"
+    #sV6Z4M-ExtFR7MiP8UM6#
+    #CtS-1ITidsWKdU7rzCMt#
+    es_password = "sV6Z4M-ExtFR7MiP8UM6"
     es = Elasticsearch([{"host": "127.0.0.1", "port": 9200, "scheme": "http"}],
                        basic_auth=(str(es_username), str(es_password)))
 
@@ -104,11 +106,13 @@ if user_input == 2:
         print("failed to connect to the server")
     port = input("Enter Neo4j DB Port: ")
     user = input("Enter Neo4j DB Username: ")
-    #password: stretches-fans-entrances
+    #password: chairwoman-tumbles-coordinators
+    # neSzjRHBf4LtF_gwQhKQBmms8fToMhqlQwbn4LzAAuw
     pwsd = input("Enter Neo4j DB Password ")
     # 54.152.13.23
+    # 174.129.148.41
     try:
-        neo4j_instance = Graph('bolt://54.152.13.23:' + port, auth=(user, pwsd))
+        neo4j_instance = Graph('bolt://localhost:' + port, auth=(user, pwsd))
         print("Success! Connected to Neo4j Database")
     except Exception as e:
         print('Error: Could not connect to the Neo4j Database')
@@ -186,13 +190,17 @@ if user_input == 2:
 
     print("# pulling data from elasticsearch")
     print(len(data))
+    list = []
+    for i in range(1,1000):
+        list.append(i * 100)
+        print(list)
     count =0
     for row in data:
-            neo4j_instance = Graph('bolt://54.152.13.23:' + port, auth=(user, pwsd))
             # print(index)
             count+=1
             print(count)
-
+            if i in list:
+                neo4j_instance = Graph('bolt://localhost:' + port, auth=(user, pwsd))
             tx = neo4j_instance.begin()
             h = nodes_matcher.match('Hostname', name=row['hostname']).first()
 
@@ -262,94 +270,5 @@ if user_input == 2:
             edge = Relationship(b, "access", u)
             qtx.create(edge)
             neo4j_instance.commit(qtx)
-    # query = {
-    #     "track_total_hits": True,
-    #     "query": {
-    #         "match_all":{}
-    #     }
-    # }
-    #
-    # resp = es.search(index="master-index", body=query,size=10000)
-    # print("Got %d Hits from Elasticsearch:" % resp['hits']['total']['value'])
-    # data=[]
-    # for hit in resp['hits']['hits']:
-    #     data.append(hit["_source"])
-    #
-    # print("# pulling data from elasticsearch")
-    # # print(df["ID"])
-    # print(data)
-    # #
-    # print(len(data))
-    # for i in data:
-    #     print(i)
-    # # # print(df)
-    #
-    #
-    #
-    # neo4j_instance =Graph('bolt://localhost:7687', name='neo4j', password='zzz')
-    # nodes_matcher = NodeMatcher(neo4j_instance)
-    # tx = neo4j_instance.begin()
-    # entity1 = nodes_matcher.match('ISP', name='ISP').first()
-    # if not entity1:
-    #     entity1 = Node('ISP', name='ISP')
-    #     tx.create(entity1)
-    #     neo4j_instance.commit(tx)
-    #
-    # tx = neo4j_instance.begin()
-    # entity2 = nodes_matcher.match('Server', name='Server').first()
-    # if not entity2:
-    #     entity2 = Node('Server', name='Server')
-    #     tx.create(entity2)
-    #
-    # qtx = neo4j_instance.begin()
-    # edge = Relationship(entity1,"connect", entity2)
-    # qtx.create(edge)
-    # neo4j_instance.commit(qtx)
-    #
-    # tx = neo4j_instance.begin()
-    # entity3 = nodes_matcher.match('Network logs', name='Network Logs').first()
-    # # tx.create(entity3)
-    # if not entity3:
-    #     entity3 = Node('Network Logs', name='Network Logs')
-    #     tx.create(entity3)
-    #
-    #     neo4j_instance.commit(tx)
-    # qtx = neo4j_instance.begin()
-    # edge = Relationship(entity2,'contains info', entity3)
-    # qtx.create(edge)
-    # neo4j_instance.commit(qtx)
-    #
-    # tx= neo4j_instance.begin()
-    # entity4 = nodes_matcher.match('Connection Details',name='Connection Details').first()
-    # if not entity4:
-    #     entity4 = Node('Connection Details',name='Connection Details')
-    #     tx.create(entity4)
-    #     neo4j_instance.commit(tx)
-    # qtx = neo4j_instance.begin()
-    # edge = Relationship(entity2,"contains info", entity4)
-    # qtx.create(edge)
-    # neo4j_instance.commit(qtx)
-    #
-    # tx = neo4j_instance.begin()
-    # entity5 = nodes_matcher.match('Browser',name='Browser').first()
-    # if not entity5:
-    #     entity5 = Node('Browser', name='Browser')
-    #     tx.create(entity5)
-    #     neo4j_instance.commit(tx)
-    # qtx = neo4j_instance.begin()
-    # edge = Relationship(entity3, "has the info", entity5)
-    # qtx.create(edge)
-    # neo4j_instance.commit(qtx)
-    #
-    # tx = neo4j_instance.begin()
-    # entity6 = nodes_matcher.match('Computer', name='Computer').first()
-    # if not entity6:
-    #     entity6 = Node('Computer', name='Computer')
-    #     tx.create(entity6)
-    #     neo4j_instance.commit(tx)
-    #
-    # qtx = neo4j_instance.begin()
-    # edge = Relationship(entity4, "has the info of connection", entity6)
-    # qtx.create(edge)
-    # neo4j_instance.commit(qtx)
+
 

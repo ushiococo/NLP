@@ -33,10 +33,11 @@ def find_nth(haystack, needle, n):
         n -= 1
     return start
 
-# path = askopenfilename(title="Select file to train", filetypes=(("text files","*.txt"),("all files", "*")))
+path = askopenfilename(title="Select file to train", filetypes=(("text files","*.txt"),("all files", "*")))
 # path ="C:\\Users\\qiaoyan.ooi\\Downloads\\CapstoneFYP-main\\test.txt"
 # path ="C:\\Users\\Qiaoyan\\Downloads\\CapstoneFYP\\client_hostname2.txt"
-path = "C:\\Users\\Qiaoyan\\Downloads\\test1\\train.txt"
+# path = "C:\\Users\\Qiaoyan\\Downloads\\test1\\train.txt"
+# path
 
 try:
     with open(path,'r') as f:
@@ -118,8 +119,8 @@ try:
   
     # model = None
     # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\nl\\test")
-    # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Downloads\\CapstoneFYP-main\\test")
-    output_dir=Path("C:\\Users\\Qiaoyan\\Downloads\\test1 - Copy\\test")
+    output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\trainmodel")
+    # output_dir=Path("C:\\Users\\Qiaoyan\\Downloads\\test1 - Copy\\test")
 
     n_iter=1
     # print("RESULT0: \n")

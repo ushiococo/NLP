@@ -1,4 +1,9 @@
-path3 = "C:\\Users\\Qiaoyan\\Downloads\\test1\\client_hostname2.txt"
+
+from tkinter.filedialog import askopenfilename
+
+path3 = askopenfilename(title="Select file to train", filetypes=(("text files","*.txt"),("all files", "*")))
+
+# path3 = "C:\\Users\\Qiaoyan\\Downloads\\test1\\client_hostname2.txt"
 
 
 with open(path3, 'r') as f3:
@@ -9,12 +14,12 @@ with open(path3, 'r') as f3:
     count = 0
     for i in a:
         count += 1
-        with open(f'C:\\Users\\Qiaoyan\\Downloads\\test1 - Copy\\test2\\test{count}.txt','w') as f:
+        with open(f'C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\dataset\\dataset{count}.txt','w') as f:
 
         # with open(f'test{count}.txt','w') as f:
            i = ''.join(i)
            i = i.replace("\t", " ")
-        #    i = i.replace("\n", " ")
+           i = i.replace("\n", "\n")
         #    print(type(i))
-           f.writelines(str(i) +"\n")
+           f.writelines(str(i))
         print("Extracting done!")

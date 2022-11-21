@@ -124,7 +124,7 @@ if user_input == 1:
     # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\nl\\test")
     # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Downloads\\CapstoneFYP-main\\test")
     # output_dir=Path("C:\\Users\\Qiaoyan\\Downloads\\CapstoneFYP\\test")
-    output_dir = Path("C:\\Users\\Qiaoyan\\Downloads\\test1\\test")
+    output_dir = Path("C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\trainmodel")
 
     # load the model
 
