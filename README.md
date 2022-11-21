@@ -18,3 +18,9 @@
 ![image](https://user-images.githubusercontent.com/61874750/202965178-d8f902bd-b2a7-4699-8624-1b5a9ca778fd.png)
 Get the password
 ![image](https://user-images.githubusercontent.com/61874750/202970855-89c949a6-d69f-4efa-b807-53edc6ba3a2d.png)
+
+7. Make sure is connected to Elasticsearch
+  localhost:9200
+8.![image](https://user-images.githubusercontent.com/61874750/202973580-b41e274d-3777-449a-b16d-3550a151d0f9.png)
+  ![image](https://user-images.githubusercontent.com/61874750/202973537-221c31d4-3d9a-4a80-8047-95ead747600c.png)
+
