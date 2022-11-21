@@ -5,3 +5,4 @@
 3. test the data with the trainmodel
 ![image](https://user-images.githubusercontent.com/61874750/202945369-85f3c6db-d268-4cc3-8a67-2fc440100b2b.png)
 
+4. use datalinkage.py to perform fuzzymatcher to match the entity with their records
