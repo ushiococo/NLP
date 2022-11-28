@@ -38,7 +38,7 @@ print("choose option 1-2 \n 1: Push data into Elasticsearch \n 2: Plotting Knowl
 user_input = int(input("Enter 1 or 2 "))
 
 if user_input == 1:
-    df = pd.read_csv("best2.csv")
+    df = pd.read_csv("best.csv")
     #Defining the settings for this ingestion process: set field limits
     params = {
         "settings": {
@@ -190,17 +190,17 @@ if user_input == 2:
 
     print("# pulling data from elasticsearch")
     print(len(data))
-    list = []
-    for i in range(1,1000):
-        list.append(i * 100)
-        print(list)
+    # list = []
+    # for i in range(1,1000):
+    #     list.append(i * 100)
+    #     print(list)
     count =0
     for row in data:
             # print(index)
             count+=1
             print(count)
-            if i in list:
-                neo4j_instance = Graph('bolt://localhost:' + port, auth=(user, pwsd))
+            # if i in list:
+            neo4j_instance = Graph('bolt://localhost:' + port, auth=(user, pwsd))
             tx = neo4j_instance.begin()
             h = nodes_matcher.match('Hostname', name=row['hostname']).first()
 
