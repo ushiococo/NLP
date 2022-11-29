@@ -115,13 +115,12 @@ try:
     #     i = i.replace("	", " ").replace("\n","").replace("\t","")
     print("---------------------------------------------------------------------------------------------")
 
-    model = 'en_core_web_lg'
+    # model = 'en_core_web_lg'
   
-    # model = None
-    # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\nl\\test")
-    output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\trainmodel")
-    # output_dir=Path("C:\\Users\\Qiaoyan\\Downloads\\test1 - Copy\\test")
+    model = None
+    # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\trainmodel")
 
+    output_dir = Path("D:\\Capstone\\NLP\\trainmodel")
     n_iter=1
     # print("RESULT0: \n")
     print("#data for testing")
@@ -161,6 +160,10 @@ try:
         for ent in annotations.get('entities'):
             # print(ent[2])
             ner.add_label(ent[2])
+    if model is None:
+        optimizer = nlp.begin_training()
+    else:
+        optimizer = nlp.entity.create_optimizer()
 
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner' and pipe !='entity_ruler']
     with nlp.disable_pipes(*other_pipes):  # only train NER
@@ -178,7 +181,7 @@ try:
                         nlp.update(
                         [example],
                         drop=0.5,  
-                        # sgd=optimizer,
+                        sgd=optimizer,
                         losses=losses)
             print(losses)
     if 'entity_ruler' not in nlp.pipe_names:

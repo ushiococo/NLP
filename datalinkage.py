@@ -1,11 +1,15 @@
 import pandas as pd
 from pathlib import Path
-import fuzzywuzzy as fw
+from fuzzywuzzy import process
 import fuzzymatcher as fm
 import recordlinkage as rl
 from datetime import datetime
-
-
+import csv
+def parse_csv(path):
+    with open(path,'r') as f:
+        reader = csv.reader(f, delimiter=" ")
+        for row in reader:
+            yield row
 
 # data_details.drop("Record", axis=1, inplace=True)
 
@@ -64,6 +68,20 @@ current_time = datetime.now() - now
 print("duration:", current_time)
     # best_match = rearranged_best_matches['best_match_score'].astype(float)
 rearranged_best_matches.to_csv('best2.csv')
+
+data={}
+f1 = open('D:\\Capstone\\NLP\\best_r.csv', 'w')
+
+# create the csv writer
+writer = csv.writer(f1)
+
+for row in parse_csv("best2.csv"):
+    for found, best_match_score, matchrow in process.extract(row,data, limit=1):
+        if best_match_score >=0.0:
+            results = [row,best_match_score,found]
+            writer.writerow(results)
+
+
 # for items in rearranged_best_matches.iteritems():
 #     #     # print(items[0]) #header
 #     # print(items)

@@ -14,7 +14,8 @@ with open(path3, 'r') as f3:
     count = 0
     for i in a:
         count += 1
-        with open(f'C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\dataset\\dataset{count}.txt','w') as f:
+        # with open(f'C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\dataset\\dataset{count}.txt', 'w') as f:
+        with open(f'D:\\Capstone\\NLP\\dataset\\dataset{count}.txt','w') as f:
 
         # with open(f'test{count}.txt','w') as f:
            i = ''.join(i)

@@ -121,10 +121,9 @@ if user_input == 1:
         print("ok")
     except FileNotFoundError:
         print("Sorry, the file " + path2 + " does not exist")
-    # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Desktop\\nl\\test")
-    # output_dir=Path("C:\\Users\\qiaoyan.ooi\\Downloads\\CapstoneFYP-main\\test")
-    # output_dir=Path("C:\\Users\\Qiaoyan\\Downloads\\CapstoneFYP\\test")
-    output_dir = Path("C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\trainmodel")
+
+    # output_dir = Path("C:\\Users\\qiaoyan.ooi\\Desktop\\NLP-main\\trainmodel")
+    output_dir = Path("D:\\Capstone\\NLP\\trainmodel")
 
     # load the model
 
